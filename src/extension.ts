@@ -120,7 +120,8 @@ async function saveDbmlAsSvg() {
         filters: {
             images: ['svg']
         },
-        saveLabel: 'Save SVG'
+        saveLabel: 'Save SVG',
+        defaultUri: editor.document.uri.with({ path: editor.document.uri.path.replace(/\.\w+$/, '.svg') })
     });
 
     if (uri) {
